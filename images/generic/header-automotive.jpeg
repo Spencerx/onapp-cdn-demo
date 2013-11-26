@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dashboard - cdn.net</title>
+        <meta name="description" content="">
+        <!-- <meta name="viewport" content="width=device-width"> -->
+        <script type="text/javascript" src="//fast.fonts.com/jsapi/565d401f-c913-4c69-af04-0774ff66b9dd.js"></script>
+        <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/css/onapp.css">
+        <!-- <link rel="stylesheet" href="/css/responsive.css"> -->
+        <link rel="shortcut icon" href="/favicon.ico" >
+
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner bg-dark">
+                <div class="container">
+                    <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="http://www.cdn.net"><img src="/images/cdnnet/cdn-logo.png"></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav nav-pills">
+                                                            <li class=""><a href="/dashboard">Dashboard</a></li>
+                                <li class=""><a href="/cdn">Packages</a></li>
+                                <li class=""><a href="/cdn/detailedreports">Reports</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">owen.garrett@onapp.com <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/user/edit">Profile</a></li>
+                                                                                    <li><a href="/subscription/addcreditcard">Add Credit Card</a></li>
+                                                                                <li><a href="/user/transactions">View transactions</a></li>
+                                        <li><a href="/user/password">Change password</a></li>
+                                        <li><a href="/auth/logout">Logout</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/getting-started">Getting Started</a></li>
+                                                                                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>                                    
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/admin">Admin fastlinks</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/admin/users">Users</a></li>
+                                        <li><a href="/admin/priceplans">Priceplans</a></li>
+                                        <li><a href="/admin/pops">PoPs</a></li>
+                                        <li><a href="/admin/freetrials">Free Trials</a></li>
+                                        <li><a href="/admin/cdnresources">Cdn Resources</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/admin/accountlogs">Account Logs</a></li>
+                                        <li><a href="/admin/reports">Reports</a></li>
+                                        <li><a href="/admin/stats">Stats</a></li>
+                                        <li><a href="/admin/transactions">Transactions</a></li>
+                                        <li><a href="/admin/userdeletelist">Users to delete</a></li>
+                                    </ul>
+                                </li>
+                                <li class="divider-vertical"></li>
+                                                                                    </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+		  <div class="message-container">
+		        
+		    	            		
+		  </div>
+        
+        
+        
+<div class="container">
+    <span class="page-heading">
+        <h1>Dashboard</h1>
+    </span>
+    <div class="divider-section"></div>
+    <div class="hero-unit">
+        <h1>
+            CDN total usage : 0.00 KB 
+        </h1>
+        <p>Your current usage in this billing period</p>
+        <h1>Total balance : $0.00</h1>
+        <p>Your remaining current funds</p>
+    </div>
+    <div class="divider-section"></div>
+    <h2>Last 7 days usage</h2>
+    <div class="row">
+                    <div id="jsonResource_div" class="span12" align="center" style="background-color: #eeeeee;"> Graphing... </div>
+            </div>
+    <div class="divider-section"></div>
+    <h3>You have no active priceplans</h3>
+
+<div id="purchaseSSLCertificate" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <h3>Purchase a custom SSL certificate</h3>
+    </div>
+    <div class="modal-body">
+        <p>
+            Please note: Custom SSL certificates are priced at $199/site/year. Alternatively you can use our free shared SSL certificate. Instructions are available in the Create/Edit resource page.
+        </p>
+        <p>
+            If you would still like to order a Custom SLL Certificate you firstly need to create a verification page. This will be used to verify ownership of your site for our SSL certificate provider.
+        </p>
+        <p>
+            <ol>
+            <li>Create a new HTML page in your site called <code>globalsign.html</code></li>
+            <li>Add the following text to the file: <code>Hello GlobalSign @gq5y</code></li>
+            <li>Click on <b>Purchase SSL certificate</b> to buy the certificate</li>
+            </ol>
+            <small>It may take up to 72 hours for verification to be completed. Once your certificate is available, our support team will setup the SSL on your behalf. We will notify you when this is complete and you can configure the CNAME of the CDN resource with the new details</small>
+        </p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn danger">Purchase SSL certificate</a>
+      <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+</div>
+
+<div id="deleteCdnResource" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <h3>Delete CDN Resource</h3>
+    </div>
+    <div class="modal-body">
+        <p>Deleting is permanent.  There is NO undelete.</p>
+        <p>You are about to delete the CDN definition for <em id="serviceToDelete"></em>.</p>
+
+        <p>Only press the delete button if you are sure.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn danger">Delete</a>
+      <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Cancel</button>
+    </div>
+</div>
+
+<div id="showCdnResource" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <h3>CDN Resource</h3>
+    </div>
+    <div class="modal-body">
+        <p>Add a CNAME for the CDN Hostname which can then be used to view the contents.</p>
+
+        <code><span id="serviceDns"></span> IN CNAME <span id="serviceResourceId"></span>.r.worldcdn.net.</code>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+<div id="showExternalLiveCdnResource" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <h3>External Live Streaming CDN Resource</h3>
+    </div>
+    <div class="modal-body">
+        <p>
+            CDN hostname: <code><span id="externalLiveServiceDns"></span></code><br>
+            Resource type: <code>Live Streaming (External)</code><br>
+            CDN Resource ID: <code><span id="externalLiveServiceResourceId"></span></code>
+        </p>
+        <h3>Video Embed Instructions</h3>
+        <p>Replace "mystream" with the streamname</p>
+        <p>Our easy video embed script automatically detects the browser type (Desktop or Mobile device) and loads the appropriate player. Currently, this is either Flow Player or the browser’s native HTML5 player. The streaming protocol is also set appropriately.</p>
+        <p>To use it, enter into your webpage:</p>
+        <p>
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;http://video.worldcdn.net/player.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;my-video-player&quot; height=&quot;640&quot; width=&quot;360&quot; /&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      CDNPlayer(&quot;my-video-player&quot;,RESOURCEID, &quot;mystream&quot; );
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        </p>
+        <h3>Publishing instructions</h3>
+        <p>Alternatively you can use the following script to generate the appropriate URL for publishing to your player:</p>
+        <p>
+<pre>&lt;script&gt;
+function MyCallBack(urls) {
+  // load the flash / html5 player with one of the urls
+}
+&lt;/script&gt;
+&lt;script src=&quot;http://video.worldcdn.net/RESOURCEID/mystream.jsonp?callback=MyCallBack&quot; /&gt;
+</pre>
+        </p>
+        <p>
+            More information on setting up your resource is available
+            <a href="https://help.cdn.net/entries/25182336-Setting-up-a-live-streaming-resource" target="_blank">here</a>
+        </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+<div id="showInternalLiveCdnResource" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <h3>Internal Live Streaming CDN Resource</h3>
+    </div>
+    <div class="modal-body">
+        <h3>Streaming instructions</h3>
+        <p>NOTE: Required Publishing Point Settings (to be able to retrieve with Silverlight Player):</p>
+        <p>
+            <ul>
+                <li>h.264 Baseline 3.</li>
+                <li>Audio should be AAC or MP3-stereo-44100Hz.</li>
+                <li>Key frame frequency should be 2 seconds.</li>
+                <li>Lower bitrate.</li>
+            </ul>
+        </p>
+        <p>
+            <ol>
+                <li><a href="http://www.adobe.com/ua/products/flash-media-encoder.html" target="_blank">Install Adobe Live Encoder</a></li>
+                <li>Fill in the form:<br>
+                FMS URL: <code>rtmp://<span class="internalLiveServiceResourceId"></span>.publishstream.worldcdn.net/P<span class="internalLiveServiceResourceId"></span></code><br>
+                Backup URL: <code>rtmp://backup.<span class="internalLiveServiceResourceId"></span>.publishstream.worldcdn.net/P<span class="internalLiveServiceResourceId"></span></code><br>
+                Stream: <code>Your stream name</code></li>
+                <li>Click "Connect"</li>
+                <li>In the password popup, enter "P<span class="internalLiveServiceResourceId"></span>" as the username and "<span id="internalLiveServicePassword"></span>" as the password.</li>
+                <li>Click "Start" to start publishing the live stream.</li>
+            </ol>
+        </p>
+        <h3>Video Embed Instructions</h3>
+        <p>Replace "mystream" with the streamname</p>
+        <p>Our easy video embed script automatically detects the browser type (Desktop or Mobile device) and loads the appropriate player. Currently, this is either Flow Player or the browser’s native HTML5 player. The streaming protocol is also set appropriately.</p>
+        <p>To use it, enter into your webpage:</p>
+        <p>
+<pre clas="liveServiceResourceId">&lt;html&gt;
+  &lt;head&gt;
+    &lt;script src=&quot;http://video.worldcdn.net/player.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;my-video-player&quot; height=&quot;640&quot; width=&quot;360&quot; /&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      CDNPlayer(&quot;my-video-player&quot;,RESOURCEID, &quot;mystream&quot; );
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        </p>
+
+        <h3>Publishing instructions</h3>
+        <p>Alternatively you can use the following script to generate the appropriate URL for publishing to your player:</p>
+        <p>
+<pre>&lt;script&gt;
+function MyCallBack(urls) {
+ // load the flash / html5 player with one of the urls
+}
+&lt;/script&gt;
+&lt;script src=&quot;http://video.worldcdn.net/RESOURCEID/mystream.jsonp?callback=MyCallBack&quot; /&gt;
+</pre>
+        </p>
+
+        <p>More information on setting up your resource is available <a href="https://help.cdn.net/entries/25182336-Setting-up-a-live-streaming-resource" target="_blank">here</a></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+
+    <span id="jsonResource" class="hidden">{"cols":[{"id":"","label":"Resource","pattern":"","type":"string"},{"id":"","label":"Total GB","pattern":"","type":"number"},{"id":"","label":"Total Price","pattern":"","type":"number"},{"id":"","label":"GB Label","pattern":"","type":"number"},{"type":"string","role":"annotation","p":{"role":"annotation"}},{"id":"","label":"Price Label","pattern":"","type":"number"},{"type":"string","role":"annotation","p":{"role":"annotation"}}],"p":null,"rows":[{"c":[{"v":"317480777","f":null},{"v":0.132,"f":null},{"v":"1.2397108470831881","f":" 1.24"},{"v":0.132,"f":null},{"v":"0.13 GB","f":null},{"v":"1.2397108470831881","f":null},{"v":" 1.24","f":null}]},{"c":[{"v":"549945984","f":null},{"v":0.262,"f":null},{"v":"1.8967060991734286","f":" 1.90"},{"v":0.262,"f":null},{"v":"0.26 GB","f":null},{"v":"1.8967060991734286","f":null},{"v":" 1.90","f":null}]}]}</span>
+</div>
+
+      	<footer>
+      		<div class='container'>
+      			<div class='row'>
+      				<div class='offset1 span7'>
+      					<div class='row-fluid'>
+      						<div class='column span3'>
+      							<h3>Help</h3>
+      							<ul>
+      								<li><a href='https://help.cdn.net/forums'>Help Centre</a></li>
+      								<li><a id="livechat" href='#'>Live Chat</a></li>
+      								<li><a href='http://www.cdn.net/about/#contact'>Contact Us</a></li>
+      							</ul>
+      						</div>
+                            <div class="span3 mobile-right"> 
+                                <h3>About</h3> 
+                                <ul> 
+                                    <li><a href="http://www.cdn.net/about">About CDN.net</a></li> 
+                                    <li><a href="http://www.cdn.net/privacy-policy">Privacy Policy</a></li> 
+                                    <li><a href="http://www.cdn.net/terms-of-service/">Terms of Service</a></li> 
+                                </ul> 
+                            </div>
+      						<div class='column span3'>
+      							<h3>Social</h3>
+      							<ul class='social'>
+      								<li class='facebook'><a href='http://www.facebook.com/CDNnet'>Facebook</a></li>
+      								<li class='twitter'><a href='https://twitter.com/CDNnet'>Twitter</a></li>
+      								<li class='linkedin'><a href='http://www.linkedin.com/company/cdn-net'>Linkedin</a></li>
+      							</ul>
+      						</div>
+      					</div>
+      				</div>
+      				<div class='span3'>
+      					<span class='tel'>+44 845 544 2940</span>
+      				</div>
+      			</div>
+      			<div class='row bottom'>
+      				<div class='span10 offset1'>
+                        <div class="row-fluid"> 
+                            <div class="span6"> © 2013 CDN.net powered by <a href="http://www.onapp.com/cdn">OnApp</a> </div> 
+                            <div class="span6"> </div> 
+                        </div>
+      				</div>
+      			</div>
+      		</div>
+                            <div class="hero-unit">
+                <h1>Memory: 8.25 MB</h1>
+                </div>
+                  	</footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+
+
+        <script src="/js/plugins.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+        <script src="/js/vendor/bootstrap.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" src="/js/vendor/jquery.tablesorter.js"></script>
+
+
+        <script src="/js/vendor/jquery-datatables-row-grouping/js/jquery.dataTables.js" type="text/javascript"></script>
+        <script src="/js/vendor/jquery-datatables-row-grouping/js/jquery.dataTables.rowGrouping.js" type="text/javascript"></script>
+
+        <script src="/js/main.js"></script>
+
+         
+        
+<script type="text/javascript">
+
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/3929.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+
+</script><script>
+$('#purchaseSSLCertificate').bind('show', function() {
+    var id = $(this).data('id'),
+        service = $(this).data('service'),
+        subscriptionid = $(this).data('subscriptionid'),
+        removeBtn = $(this).find('.danger'),
+        href = removeBtn.attr('href');
+
+    href="/cdn/purchasessl/id/" + id + "/subscription/" + subscriptionid;
+    removeBtn.attr('href', href);
+    $('#serviceToDelete').html(service);
+});
+
+$('.purchase-ssl').click(function(e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var service = $(this).data('service');
+    var subscriptionid = $(this).data('subscriptionid');
+    $('#purchaseSSLCertificate').data('id', id);
+    $('#purchaseSSLCertificate').data('service', service);
+    $('#purchaseSSLCertificate').data('subscriptionid', subscriptionid);
+    $('#purchaseSSLCertificate').modal('show');
+});
+
+$('#deleteCdnResource').bind('show', function() {
+    var id = $(this).data('id'),
+        service = $(this).data('service'),
+        subscriptionid = $(this).data('subscriptionid'),
+        removeBtn = $(this).find('.danger'),
+        href = removeBtn.attr('href');
+
+    href="/cdn/delete/id/" + id + "/subscription/" + subscriptionid;
+    removeBtn.attr('href', href);
+    $('#serviceToDelete').html(service);
+});
+
+$('.confirm-delete').click(function(e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var service = $(this).data('service');
+    var subscriptionid = $(this).data('subscriptionid');
+    $('#deleteCdnResource').data('id', id);
+    $('#deleteCdnResource').data('service', service);
+    $('#deleteCdnResource').data('subscriptionid', subscriptionid);
+    $('#deleteCdnResource').modal('show');
+});
+
+$('#showCdnResource').bind('show', function() {
+    var id = $(this).data('id'),
+        service = $(this).data('service'),
+        resourceid = $(this).data('resourceid'),
+        removeBtn = $(this).find('.danger'),
+        href = removeBtn.attr('href');
+
+    $('#serviceDns').html(service + ".");
+    $('#serviceResourceId').html(resourceid);
+});
+$('.confirm-show').click(function(e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var service = $(this).data('service');
+    var resourceid = $(this).data('resourceid');
+    $('#showCdnResource').data('id', id);
+    $('#showCdnResource').data('service', service);
+    $('#showCdnResource').data('resourceid', resourceid);
+    $('#showCdnResource').modal('show');
+});
+
+$('#showExternalLiveCdnResource').bind('show', function() {
+    var service = $(this).data('service'),
+        resourceid = $(this).data('resourceid'),
+        removeBtn = $(this).find('.danger'),
+        href = removeBtn.attr('href');
+
+    $(this).html($(this).html().replace(/RESOURCEID/g, resourceid));
+    $('#externalLiveServiceResourceId').html(resourceid);
+    $('.externalLiveServiceResourceId').html(resourceid);
+    $('#externalLiveServiceDns').html(service + ".");
+});
+$('.confirm-showexternallive').click(function(e) {
+    e.preventDefault();
+    var resourceid = $(this).data('resourceid');
+    var service = $(this).data('service');
+    $('#showExternalLiveCdnResource').data('resourceid', resourceid);
+    $('#showExternalLiveCdnResource').data('service', service);
+    $('#showExternalLiveCdnResource').modal('show');
+});
+
+$('#showInternalLiveCdnResource').bind('show', function() {
+    var resourceid = $(this).data('resourceid'),
+        password = $(this).data('password'),
+        removeBtn = $(this).find('.danger'),
+        href = removeBtn.attr('href');
+
+    $(this).html($(this).html().replace(/RESOURCEID/g, resourceid));
+    $('.internalLiveServiceResourceId').html(resourceid);
+    $('#internalLiveServicePassword').html(password);
+});
+$('.confirm-showinternallive').click(function(e) {
+    e.preventDefault();
+    var resourceid = $(this).data('resourceid');
+    var password = $(this).data('password');
+    $('#showInternalLiveCdnResource').data('resourceid', resourceid);
+    $('#showInternalLiveCdnResource').data('password', password);
+    $('#showInternalLiveCdnResource').modal('show');
+});
+</script>
+<script src="/js/traffic.js"></script>
+<script type="text/javascript">
+
+Traffic.chartOptions.width = 950;
+Traffic.chartOptions.height = 320;
+
+Traffic.chartOptionsLocation.width = 950;
+Traffic.chartOptionsLocation.height = 320;
+
+Traffic.chartOptionsTime.width = 950;
+Traffic.chartOptionsTime.height = 320;
+
+</script>
+
+
+                <!-- begin olark code -->
+        <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+        f[z]=function(){
+        (a.s=a.s||[]).push(arguments)};var a=f[z]._={
+        },q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+        f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+        0:+new Date};a.P=function(u){
+        a.p[u]=new Date-a.p[0]};function s(){
+        a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+        hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+        return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+        b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+        b.contentWindow[g].open()}catch(w){
+        c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+        var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+        b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+        loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+        /* custom configuration goes here (www.olark.com/documentation) */
+        olark.identify('3936-982-10-4985');/*]]>*/
+        </script><noscript><a href="https://www.olark.com/site/3936-982-10-4985/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+        <!-- end olark code -->
+                <script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-37039600-1']);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_setDomainName', 'cdn.net<http://cdn.net>']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+        </script>
+    </body>
+</html>
