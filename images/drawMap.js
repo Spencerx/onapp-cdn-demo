@@ -16,7 +16,7 @@ if( max > 0 ) {
         if( p.length < 2 ) p = '0'+p;
 
         var image = { 
-            imageURL: "../images/pie"+p+".png",
+            imageURL: "images/pie"+p+".png",
             latitude: CDNdata[i].latitude,
             longitude: CDNdata[i].longitude,
             title: CDNdata[i].description,
@@ -42,7 +42,7 @@ AmCharts.ready(function() {
     // create AmMap object
     map = new AmCharts.AmMap();
     // set path to images
-    map.pathToImages = "../images/ammap/images/";
+    map.pathToImages = "images/ammap/images/";
 
     var mapData = AmCharts.maps.continentsLow;
     mapData.svg.g.path = mapData.svg.g.path.concat( AmCharts.maps.worldLow.svg.g.path );
